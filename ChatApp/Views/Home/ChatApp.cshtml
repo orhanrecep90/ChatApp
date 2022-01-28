@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link href="~/css/site.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox-content">
+                    <div class="input-group mb-3">
+                        <input id="userName" type="text" class="form-control" aria-describedby="SaveUserName" placeholder="nick name" spellcheck="false" data-ms-editor="true">
+                        <button class="btn btn-primary" type="button" id="SaveUserName">Save</button>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="groupName" type="text" class="form-control" aria-describedby="SaveUserName" placeholder="Group " spellcheck="false" data-ms-editor="true" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="display:none" id="chatAppMain">
+            <div class="col-lg-12">
+                <div class="ibox chat-view">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-md-9 " id="chatTex" style="display:none">
+                                <div class="chat-discussion" id="messagesArea">
+                                </div>
+                                <div class="chat-message-form">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" aria-describedby="sendButton" spellcheck="false" data-ms-editor="true" id="messageInput">
+                                        <button class="btn btn-success" type="button" id="sendButton">Send Message</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3">
+                                <div class="chat-users">
+                                    <div class="users-list">
+                                        <div class="chat-user">
+                                            <span class="pull-right label label-primary"><input type="button" class="btn btn-outline-primary joinGroup" onclick="fncjoinGroup(this.value)" value="Join Room-1" /></span>
+                                            <div class="chat-user-name">
+                                                <strong>Room-1</strong>
+                                            </div>
+                                        </div>
+                                        <div class="chat-user">
+                                            <span class="pull-right label label-primary"><input type="button" class="btn btn-outline-primary joinGroup" onclick="fncjoinGroup(this.value)" value="Join Room-2" /></span>
+                                            <div class="chat-user-name">
+                                                <strong>Room-2</strong>
+                                            </div>
+                                        </div>
+                                        <div class="chat-user">
+                                            <span class="pull-right label label-primary"><input type="button" class="btn btn-outline-primary joinGroup" onclick="fncjoinGroup(this.value)" value="Join Room-3" /></span>
+                                            <div class="chat-user-name">
+                                                <strong>Room-3</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
